@@ -1,0 +1,79 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.headline {
+  font-size: 6.25rem;
+  text-align: center;
+  font-weight: 400;
+  z-index: 1;
+}
+.landing-page {
+  background-color: black;
+  padding-top: 5rem;
+}
+
+.secondpage {
+  background-color: black;
+  padding-top: 7rem;
+}
+.sub-headline {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  max-width: 630px;
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: black;
+  display: inline-block;
+  animation-name: jumpingDots;
+  animation-duration: 0.5s;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+.circle {
+  z-index: -1;
+  margin-top: 250px;
+  margin-left: -65px;
+  position: absolute;
+  opacity: 1;
+}
+.card {
+  border: none;
+  top: 0;
+  transition: 0.3s;
+}
+.card:hover {
+  top: -20px;
+}
+.sold {
+  border-radius: 0px;
+  padding: 15px 25px 15px 25px;
+}
+.sold:hover .dot {
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes jumpingDots {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    border: none;
+    top: 0;
+    transition: 0.3s;
+  }
+  .card:hover {
+    top: -10px;
+  }
+}
